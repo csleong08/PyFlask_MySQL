@@ -1,0 +1,40 @@
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+fix: Supply the correct password to pymysql.connect()
+
+1. pymysql.err.InternalError: (1049, "Unknown database 'mydb'")
+Fix 1. In server.py, line 4: replace 'mydb' with a database that is available in MySQL Workbench e.g. twitter.
+TL;DR: replace 'mydb' with 'twitter'. 
+
+2. server.py, line 9: if you use 'return' instead of 'print', it will break with the error below.
+SyntaxError: 'return' outside function
+Fix 2. replace 'return' with 'print'. 
+
+3. server.py, line 10: I removed the entire line of "if __name__=="__main__":"
+IndentationError: unexpected indent
+Fix 3. add line: if __name__=="__main__":
+
+4. server.py, line 11: I removed a letter in "__main__"
+no error: the query printed but it did not show:
+* Debugger is active!
+* Debugger PIN: 935-890-010
+Fix 4. use proper spelling. 
+
+5. server.py, line 11: I removed a letter in "__name__"
+NameError: name '__nme__' is not defined
+Fix 5. spell properly. 
+
+6. server.py, line 11: True was not capitalized (e.g. true)
+NameError: name 'true' is not defined
+Fix 5. Capitalize 'T'. 
+
+7. mysqlconnection.py, line 3: I removed the ':' at the end of class mysqlconnection
+SyntaxError: invalid syntax
+Fix 7. add ':' at the end of the line. 
+
+8. mysqlconnection.py, line 7: mispelled user = ''
+pymysql.err.OperationalError: (1045, "Access denied for user 'rot'@'localhost' (using password: YES)")
+Fix 8. spell correctly 
+
+9. mysqlconnection.py, line 8: mispelled password = ''
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")Fix 9. spell correctly 
+Fix 9. kicked out of python instantly. 
